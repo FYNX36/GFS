@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fisch\\OneDrive\\Dokumente\\GFS\\GFS.csproj": {}
+    "C:\\Users\\fisch\\Github\\GFS\\GFS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fisch\\OneDrive\\Dokumente\\GFS\\GFS.csproj": {
+    "C:\\Users\\fisch\\Github\\GFS\\GFS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fisch\\OneDrive\\Dokumente\\GFS\\GFS.csproj",
+        "projectUniqueName": "C:\\Users\\fisch\\Github\\GFS\\GFS.csproj",
         "projectName": "GFS",
-        "projectPath": "C:\\Users\\fisch\\OneDrive\\Dokumente\\GFS\\GFS.csproj",
+        "projectPath": "C:\\Users\\fisch\\Github\\GFS\\GFS.csproj",
         "packagesPath": "C:\\Users\\fisch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fisch\\OneDrive\\Dokumente\\GFS\\obj\\",
+        "outputPath": "C:\\Users\\fisch\\Github\\GFS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fisch\\AppData\\Roaming\\NuGet\\NuGet.Config",
