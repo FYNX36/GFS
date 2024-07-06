@@ -217,6 +217,7 @@ namespace GFS
             lbl_menu.Text = "Speisekarte";
             txt_Id.ReadOnly = false;
             setMenu();
+            btn_dismiss.Enabled = true;
 
         }
     }

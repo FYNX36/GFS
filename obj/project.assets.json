@@ -8,19 +8,24 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\fisch\\.nuget\\packages\\": {}
+    "C:\\Users\\fisch\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fisch\\Github\\GFS\\GFS.csproj",
+      "projectUniqueName": "E:\\OneDrive\\Dokumente\\GitHub\\GFS\\GFS.csproj",
       "projectName": "GFS",
-      "projectPath": "C:\\Users\\fisch\\Github\\GFS\\GFS.csproj",
+      "projectPath": "E:\\OneDrive\\Dokumente\\GitHub\\GFS\\GFS.csproj",
       "packagesPath": "C:\\Users\\fisch\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fisch\\Github\\GFS\\obj\\",
+      "outputPath": "E:\\OneDrive\\Dokumente\\GitHub\\GFS\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\fisch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
