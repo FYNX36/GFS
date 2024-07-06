@@ -5,6 +5,7 @@ namespace GFS
 {
     public partial class Main : Form
     {
+        // Initialisiert die Steuerungsklasse
         Steuerung steuerung = new Steuerung();
 
         public Main()
@@ -12,6 +13,7 @@ namespace GFS
             InitializeComponent();
         }
 
+        // Setzt das Menü beim Laden der Hauptform
         private void Main_Load(object sender, EventArgs e)
         {
             setMenu();
@@ -19,13 +21,17 @@ namespace GFS
         private decimal totalCost = 0;
         private bool oredered = false;
 
+        // Setzt die Gesamtkosten
         public void setTotalCost(decimal totalCost)
         {
             this.totalCost = totalCost;
         }
+
+        // Gibt die Gesamtkosten zurück
         public decimal getTotalCost() { return totalCost; }
 
 
+        // Überprüft die eingegebene ID und aktualisiert den Status und das Guthaben
         private void txt_Id_TextChanged(object sender, EventArgs e)
         {
             try
@@ -52,6 +58,7 @@ namespace GFS
 
         }
 
+        // Setzt das Menü
         private void setMenu()
         {
 
@@ -73,6 +80,7 @@ namespace GFS
             }
         }
 
+        // Speichert die Bestellung, wenn auf die Schaltflächen geklickt wird
         private void btn_1_Click(object sender, EventArgs e)
         {
             steuerung.safeOrder("1");
@@ -118,6 +126,8 @@ namespace GFS
             steuerung.safeOrder("9");
         }
 
+
+        // Verarbeitet die Zahlung, wenn auf die Schaltfläche "Zahlen" geklickt wird
         private void btn_pay_Click(object sender, EventArgs e)
         {
             decimal balance = Steuerung.GetBalanceById(steuerung.getId());
@@ -156,6 +166,8 @@ namespace GFS
 
         }
 
+
+        // Zeigt das Menü an
         private void seeMenu()
         {
             list_menu.Items.Clear();
@@ -190,22 +202,28 @@ namespace GFS
             list_menu.Scrollable = true;
         }
 
+        // Führt die Zahlung durch
         private void pay()
         {
             decimal balance = Steuerung.GetBalanceById(steuerung.getId());
             steuerung.UpdateBalance(steuerung.getId(), balance - getTotalCost());
         }
 
+        // Setzt die Form zurück, wenn auf die Schaltfläche "Weiter" geklickt wird
         private void btn_next_Click(object sender, EventArgs e)
         {
             reset();
         }
 
+
+        // Löscht die Bestellung, wenn auf die Schaltfläche "Abbrechen" geklickt wird
         private void btn_dismiss_Click(object sender, EventArgs e)
         {
             steuerung.deleteOrder();
         }
 
+
+        // Setzt die Form zurück
         private void reset()
         {
             steuerung.deleteOrder();

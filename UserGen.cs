@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GFS
 {
+    //Wird verwendet um das Speichern der registrierten Benutzer zu vereinfachen
     public class UserGen
     {
         public int Id { get; set; }

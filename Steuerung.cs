@@ -15,6 +15,7 @@ namespace GFS
         private int id;
         public List<OrderGen> Order  = new List<OrderGen>();
 
+        // Setzt die ID
         public void setId(int Id)
         {
             try
@@ -26,9 +27,12 @@ namespace GFS
                 id = 0;
             }
         }
+
+        // Gibt die ID zurück
         public int getId() { return id; }
 
 
+        // Überprüft, ob der Benutzer registriert ist
         public void checkRegistered()
         {
             if (Data.RegisteredCustomerIds.Any(user => user.Id == id))
@@ -41,16 +45,21 @@ namespace GFS
             }
         }
 
+        // Gibt zurück, ob der Benutzer registriert ist
         public bool getRegistered()
         {
             return registered;
         }
 
+
+        // Gibt das Guthaben des Benutzers zurück
         public static decimal GetBalanceById(int userId)
         {
             var user = Data.RegisteredCustomerIds.Find(u => u.Id == userId);
             return user?.balance ?? 0.00m;
         }
+
+        // Aktualisiert das Guthaben des Benutzers
         public void UpdateBalance(int userId, decimal newBalance)
         {
             var user = Data.RegisteredCustomerIds.Find(u => u.Id == userId);
@@ -59,7 +68,8 @@ namespace GFS
                 user.balance = newBalance;
             }
         }
-        
+
+        // Speichert die Bestellung
         public void safeOrder(string btn)
         {
             if (Order.Any(order => order.Id == btn))
@@ -68,6 +78,8 @@ namespace GFS
             }
             else { Order.Add(new OrderGen { Id = btn, count = 1 }); }
         }
+
+        // Löscht die Bestellung
         public void deleteOrder()
         {
             Order.Clear();

@@ -8,6 +8,8 @@ namespace GFS
 {
     public static class Data
     {
+
+        // Liste der Menüpunkte
         public static List<MenuItem> MenuItems { get; } = new List<MenuItem>
          {
            new MenuItem {Nummer = "1", Name = "Bürger", Price = 8.99m},
@@ -21,6 +23,8 @@ namespace GFS
            new MenuItem {Nummer = "9", Name = "Kaffe", Price = 1.10m},
          };
         
+
+        // Liste der registrierten Benutzer
         public static List<UserGen> RegisteredCustomerIds { get; } = new List<UserGen>
         {
             new UserGen {Id = 110, balance = GetRandomBalance()},
@@ -34,8 +38,9 @@ namespace GFS
             new UserGen {Id = 913, balance = GetRandomBalance()},
             new UserGen {Id = 710, balance = GetRandomBalance()},
         };
-        
 
+
+        // Gibt eine zufällige Guthaben zurück
         private static decimal GetRandomBalance()
         {
 

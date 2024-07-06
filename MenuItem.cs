@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace GFS
 {
+
+    //Wird verwendet um das Speichern der Menüpunkte zu vereinfachen
     public class MenuItem
     {
         public string Nummer { get; set; }
